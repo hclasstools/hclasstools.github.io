@@ -24,19 +24,113 @@
                     </li>
                 </ul>
                 <form class="d-flex" onsubmit="search(event)">
-                    <input class="form-control search-input" type="text" placeholder="Search" id="searchBar">
+                    <input class="form-control search-input" type="text" placeholder="Search by title or author" id="searchBar">
                     <button class="btn btn-secondary" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
     <div class="container content">
-        <h1>Welcome to the Games Page</h1>
-        <div class="search-item">Game 1</div>
-        <div class="search-item">Game 2</div>
-        <div class="search-item">Multiplayer Games</div>
-        <div class="search-item">Single-player Games</div>
+        <h1 class="text-center">Games</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" id="gamesGrid">
+            <div class="col search-item" data-title="minecraft" data-author="Mojang Studios">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Minecraft</h5>
+                        <p class="card-text">Author: Mojang Studios</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="doodle jump" data-author="Lima Sky">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Doodle Jump</h5>
+                        <p class="card-text">Author: Lima Sky</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="geometry dash" data-author="RobTop Games">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Geometry Dash</h5>
+                        <p class="card-text">Author: RobTop Games</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 3d" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 3D</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 2" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 2</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 3" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 3</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 4" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 4</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 5" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 5</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col search-item" data-title="parkour block 6" data-author="PolyGames">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Parkour Block 6</h5>
+                        <p class="card-text">Author: PolyGames</p>
+                        <a href="#" class="btn btn-secondary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function search(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const items = document.querySelectorAll('.search-item');
+            items.forEach((item) => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                const author = item.getAttribute('data-author').toLowerCase();
+                if (title.includes(query) || author.includes(query)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
