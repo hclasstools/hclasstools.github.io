@@ -1,0 +1,28 @@
+body {
+    background-color: #2e2e2e;
+    color: white;
+}
+.navbar {
+    background-color: #333333;
+}
+.nav-link {
+    color: white !important;
+}
+.nav-link.active {
+    background-color: #555555;
+    border-radius: 5px;
+}
+.search-input {
+    background-color: #555555;
+    border: none;
+    color: white;
+}
+.search-input::placeholder {
+    color: #bbbbbb;
+}
+.content {
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}
