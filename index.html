@@ -31,12 +31,41 @@
         </div>
     </nav>
     <div class="container content">
-        <h1>Welcome to the Home Page</h1>
-        <div class="search-item">Home Content 1</div>
-        <div class="search-item">Home Content 2</div>
-        <div class="search-item">Welcome Message</div>
-        <div class="search-item">Other Information</div>
+        <h1 class="text-center display-4 fw-bold my-4">Welcome to HClassTools!</h1>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Games</h2>
+                        <p class="card-text">Explore and enjoy a collection of fun and engaging games.</p>
+                        <a href="games.html" class="btn btn-secondary">Go to Games</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card bg-dark text-white">
+                    <div class="card-body text-center">
+                        <h2 class="card-title">Latest Test Study</h2>
+                        <p class="card-text">Access resources and tools for your latest test studies.</p>
+                        <a href="test-study.html" class="btn btn-secondary">Go to Test Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        function search(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const items = document.querySelectorAll('.search-item');
+            items.forEach((item) => {
+                if (item.textContent.toLowerCase().includes(query)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
