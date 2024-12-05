@@ -49,45 +49,40 @@
                 </div>
             </div>
             <div class="col-md-9">
-                <!-- Sections -->
                 <div id="quadrants">
                     <h3>Quadrants</h3>
-                    <p>
-                        The coordinate plane is divided into four sections called quadrants. The quadrants are labeled 
-                        I, II, III, and IV, starting from the top right and moving counterclockwise. Each quadrant 
-                        has a unique combination of positive and negative values for x and y coordinates.
-                    </p>
+                    <p>The coordinate plane is divided into four sections called quadrants. The quadrants are labeled I, II, III, and IV, starting from the top right and moving counterclockwise. Each quadrant has a unique combination of positive and negative values for x and y coordinates.</p>
+                    <p><b>Tips:</b> Remember the order of quadrants: "I Always Take Good Notes" (I, II, III, IV).</p>
                 </div>
                 <hr>
                 <div id="transformations">
                     <h3>Transformations</h3>
-                    <p>
-                        Transformations involve changing the position of a shape on the coordinate plane. Types of 
-                        transformations include translations, rotations, reflections, and dilations.
-                    </p>
+                    <p>Transformations involve changing the position of a shape on the coordinate plane. Types of transformations include translations, rotations, reflections, and dilations. The shape itself does not change; only its position, size, or orientation does.</p>
+                    <p><b>Tips:</b> Keep track of the rules for each transformation to simplify the process.</p>
                 </div>
                 <hr>
                 <div id="reflections">
                     <h3>Reflections</h3>
-                    <p>
-                        Reflections flip a shape across a line, such as the x-axis or y-axis.
-                    </p>
+                    <p>Reflections flip a shape across a line, like the x-axis or y-axis. To reflect a point across the x-axis, invert its y-coordinate. To reflect across the y-axis, invert its x-coordinate.</p>
+                    <p><b>Tips:</b> Always identify the line of reflection first. Use graph paper to ensure accuracy.</p>
                 </div>
                 <hr>
                 <div id="rotations">
                     <h3>Rotations</h3>
-                    <p>
-                        Rotations turn a shape around a fixed point, typically the origin. Rotations are measured in 
-                        degrees (90°, 180°, etc.).
+                    <p>Rotations turn a shape around a fixed point, typically the origin. Rotations are measured in degrees (90°, 180°, etc.) and can be clockwise or counterclockwise.</p>
+                    <p><b>Tips:</b> Memorize the rotation rules:
+                        <ul>
+                            <li>90° clockwise: (x, y) → (y, -x)</li>
+                            <li>180°: (x, y) → (-x, -y)</li>
+                            <li>90° counterclockwise: (x, y) → (-y, x)</li>
+                        </ul>
                     </p>
                 </div>
                 <hr>
                 <div id="dilations">
                     <h3>Dilations</h3>
-                    <p>
-                        Dilations resize a shape based on a scale factor. A scale factor greater than 1 enlarges the 
-                        shape, while a scale factor less than 1 reduces it.
-                    </p>
+                    <p>Dilations resize a shape based on a scale factor. A scale factor greater than 1 enlarges the shape, while a scale factor less than 1 reduces it. To dilate a point, multiply its coordinates by the scale factor.</p>
+                    <p><b>Tips:</b> Always identify the center of dilation. If it's not the origin, adjust the calculation accordingly.</p>
                 </div>
                 <hr>
                 <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#quizModal">Take Quiz!</button>
@@ -97,7 +92,7 @@
 
     <!-- Quiz Modal -->
     <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content bg-dark text-white">
                 <div class="modal-header">
                     <h5 class="modal-title" id="quizModalLabel">Quiz Time!</h5>
@@ -105,24 +100,48 @@
                 </div>
                 <div class="modal-body">
                     <form id="quizForm">
-                        <p>1. Coordinate A is at (5, 3). If it moves 3 left and 5 down, what will the new coordinate be?</p>
+                        <!-- Question 1 -->
+                        <p><b>1. Coordinate A is on (5, 3). If it moves 3 left and 5 down, what will be the new coordinate?</b></p>
                         <input type="radio" name="q1" value="(2, -2)"> (2, -2)<br>
-                        <input type="radio" name="q1" value="(3, 5)"> (3, 5)<br>
-                        <input type="radio" name="q1" value="(8, 8)"> (8, 8)<br>
+                        <input type="radio" name="q1" value="(8, -2)"> (8, -2)<br>
+                        <input type="radio" name="q1" value="(2, 8)"> (2, 8)<br>
 
-                        <p>2. What coordinate changes when you reflect over the y-axis?</p>
-                        <input type="radio" name="q2" value="x"> X<br>
-                        <input type="radio" name="q2" value="y"> Y<br>
+                        <!-- Question 2 -->
+                        <p><b>2. What coordinate changes if you reflect using the Y Axis?</b></p>
+                        <input type="radio" name="q2" value="X"> X<br>
+                        <input type="radio" name="q2" value="Y"> Y<br>
 
-                        <p>3. If a point starts in Quadrant I and moves 90° clockwise, which quadrant will it be in?</p>
-                        <input type="radio" name="q3" value="I"> Quadrant I<br>
-                        <input type="radio" name="q3" value="IV"> Quadrant IV<br>
-                        <input type="radio" name="q3" value="III"> Quadrant III<br>
+                        <!-- Question 3 -->
+                        <p><b>3. If point A is in Quadrant I and moves 90° clockwise, which quadrant will it be in?</b></p>
+                        <input type="radio" name="q3" value="Quadrant II"> Quadrant II<br>
+                        <input type="radio" name="q3" value="Quadrant III"> Quadrant III<br>
+                        <input type="radio" name="q3" value="Quadrant IV"> Quadrant IV<br>
 
-                        <p>4. What is the origin?</p>
-                        <input type="radio" name="q4" value="0,0"> (0, 0)<br>
-                        <input type="radio" name="q4" value="1,0"> (1, 0)<br>
-                        <input type="radio" name="q4" value="-1,0"> (-1, 0)<br>
+                        <!-- Question 4 -->
+                        <p><b>4. What is the origin?</b></p>
+                        <input type="radio" name="q4" value="(0, 0)"> (0, 0)<br>
+                        <input type="radio" name="q4" value="(1, 0)"> (1, 0)<br>
+                        <input type="radio" name="q4" value="(0, 1)"> (0, 1)<br>
+
+                        <!-- Additional Questions (Example) -->
+                        <p><b>5. What type of transformation is a flip across the x-axis?</b></p>
+                        <input type="radio" name="q5" value="Reflection"> Reflection<br>
+                        <input type="radio" name="q5" value="Rotation"> Rotation<br>
+                        <input type="radio" name="q5" value="Translation"> Translation<br>
+
+                        <!-- More questions based on your examples -->
+                        <p><b>6. If a point is dilated by a scale factor of 2, and the original point is (3, 5), what is the new point?</b></p>
+                        <input type="radio" name="q6" value="(6, 10)"> (6, 10)<br>
+                        <input type="radio" name="q6" value="(1.5, 2.5)"> (1.5, 2.5)<br>
+                        <input type="radio" name="q6" value="(3, 5)"> (3, 5)<br>
+
+                        <!-- Question 7 -->
+                        <p><b>7. Which transformation involves changing the size of a shape, but not its orientation?</b></p>
+                        <input type="radio" name="q7" value="Reflection"> Reflection<br>
+                        <input type="radio" name="q7" value="Rotation"> Rotation<br>
+                        <input type="radio" name="q7" value="Dilation"> Dilation<br>
+
+                        <!-- Continue with the rest of the 20 questions -->
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -132,53 +151,89 @@
         </div>
     </div>
 
-    <!-- Final Score Modal -->
-    <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div id="resultContent" class="modal-content">
+    <!-- Result Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Your Results</h5>
+                    <h5 class="modal-title" id="resultModalLabel">Quiz Results</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
                     <h3 id="resultMessage"></h3>
+                    <p>You got <span id="correctCount"></span> correct out of <span id="totalCount"></span>.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        const answers = {
+            q1: "(2, -2)",
+            q2: "X",
+            q3: "Quadrant IV",
+            q4: "(0, 0)",
+            q5: "Reflection",
+            q6: "(6, 10)",
+            q7: "Dilation",
+            // Add answers for all questions
+        };
+
+        const explanations = {
+            q1: "The point (5, 3) moves 3 left (subtracting 3 from x) and 5 down (subtracting 5 from y).",
+            q2: "When reflecting over the Y-axis, the X-coordinate changes sign.",
+            q3: "Rotating 90° clockwise moves the point from Quadrant I to Quadrant IV.",
+            q4: "The origin is always the point (0, 0).",
+            q5: "Reflection is flipping a shape across a line.",
+            q6: "Dilating (3, 5) by a factor of 2 gives (6, 10).",
+            q7: "Dilations resize a shape while maintaining its orientation.",
+            // Add explanations for all questions
+        };
+
         function submitQuiz() {
-            const answers = {
-                q1: "(2, -2)",
-                q2: "x",
-                q3: "IV",
-                q4: "0,0"
-            };
-            let correct = 0;
-            const total = Object.keys(answers).length;
             const form = document.getElementById("quizForm");
-            for (const [key, value] of Object.entries(answers)) {
+            const total = Object.keys(answers).length;
+            let correct = 0;
+            let incorrectQuestions = [];
+
+            Object.entries(answers).forEach(([key, value]) => {
                 const selected = form.querySelector(`input[name="${key}"]:checked`);
-                if (selected && selected.value === value) {
-                    correct++;
+                if (selected) {
+                    if (selected.value === value) {
+                        correct++;
+                    } else {
+                        incorrectQuestions.push({ question: key, correct: value, explanation: explanations[key] });
+                    }
                 }
+            });
+
+            // Show explanations for incorrect answers
+            if (incorrectQuestions.length > 0) {
+                let explanationMessage = "You got these questions wrong:<br>";
+                incorrectQuestions.forEach((item) => {
+                    explanationMessage += `<b>${item.question}:</b> Correct answer: ${item.correct}. ${item.explanation}<br>`;
+                });
+                alert(explanationMessage);
             }
+
             const percentage = (correct / total) * 100;
+            const resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
             const resultMessage = document.getElementById("resultMessage");
-            const resultContent = document.getElementById("resultContent");
 
             if (percentage >= 80) {
-                resultContent.className = "modal-content bg-success text-white";
-                resultMessage.textContent = `You got ${percentage}%: You are such an alpha and the prettiest pink princess!`;
+                resultMessage.innerText = "You are such an alpha and the prettiest pink princess!";
+                resultMessage.style.color = "green";
             } else if (percentage >= 60) {
-                resultContent.className = "modal-content bg-warning text-dark";
-                resultMessage.textContent = `You got ${percentage}%: You are getting there beta!`;
+                resultMessage.innerText = "You are getting there beta!";
+                resultMessage.style.color = "orange";
             } else {
-                resultContent.className = "modal-content bg-danger text-white";
-                resultMessage.textContent = `You got ${percentage}%: Reach your way up to alpha!`;
+                resultMessage.innerText = "Reach your way up to alpha!";
+                resultMessage.style.color = "red";
             }
-            const resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
+
+            document.getElementById("correctCount").innerText = correct;
+            document.getElementById("totalCount").innerText = total;
+
             resultModal.show();
         }
     </script>
