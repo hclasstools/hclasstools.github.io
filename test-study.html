@@ -49,47 +49,36 @@
                 </div>
             </div>
             <div class="col-md-9">
+                <!-- Sections -->
                 <div id="quadrants">
                     <h3>Quadrants</h3>
                     <p>
                         The coordinate plane is divided into four sections called quadrants. The quadrants are labeled 
-                        1, 2, 3, and 4, starting from the top right and moving counterclockwise. Each quadrant 
+                        I, II, III, and IV, starting from the top right and moving counterclockwise. Each quadrant 
                         has a unique combination of positive and negative values for x and y coordinates.
                     </p>
-                    <p><b>Tips:</b> Remember the order of quadrants: Top right is Quadrant Number 1, Top Left is Quadrant Number 2, Bottom Left is Quadrant Number 3 and Bottom Right is Quadrant Number 4.</p>
                 </div>
                 <hr>
                 <div id="transformations">
                     <h3>Transformations</h3>
                     <p>
                         Transformations involve changing the position of a shape on the coordinate plane. Types of 
-                        transformations include translations, rotations, reflections, and dilations. The shape itself 
-                        does not change; only its position, size, or orientation does.
+                        transformations include translations, rotations, reflections, and dilations.
                     </p>
-                    <p><b>Tips:</b> Keep track of the rules for each transformation to simplify the process.</p>
                 </div>
                 <hr>
                 <div id="reflections">
                     <h3>Reflections</h3>
                     <p>
-                        Reflections flip a shape across a line, like the x-axis or y-axis. To reflect a point across 
-                        the x-axis, invert its y-coordinate. To reflect across the y-axis, invert its x-coordinate.
+                        Reflections flip a shape across a line, such as the x-axis or y-axis.
                     </p>
-                    <p><b>Tips:</b> Always identify the line of reflection first. Use graph paper to ensure accuracy.</p>
                 </div>
                 <hr>
                 <div id="rotations">
                     <h3>Rotations</h3>
                     <p>
                         Rotations turn a shape around a fixed point, typically the origin. Rotations are measured in 
-                        degrees (90°, 180°, etc.) and can be clockwise or counterclockwise.
-                    </p>
-                    <p><b>Tips:</b> Memorize the rotation rules:
-                        <ul>
-                            <li>90° clockwise: (x, y) → (y, -x)</li>
-                            <li>180°: (x, y) → (-x, -y)</li>
-                            <li>90° counterclockwise: (x, y) → (-y, x)</li>
-                        </ul>
+                        degrees (90°, 180°, etc.).
                     </p>
                 </div>
                 <hr>
@@ -97,10 +86,8 @@
                     <h3>Dilations</h3>
                     <p>
                         Dilations resize a shape based on a scale factor. A scale factor greater than 1 enlarges the 
-                        shape, while a scale factor less than 1 reduces it. To dilate a point, multiply its coordinates 
-                        by the scale factor.
+                        shape, while a scale factor less than 1 reduces it.
                     </p>
-                    <p><b>Tips:</b> Always identify the center of dilation. If it's not the origin, check how much left/rights or up/downs it takes to reach the point.</p>
                 </div>
                 <hr>
                 <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#quizModal">Take Quiz!</button>
@@ -108,6 +95,7 @@
         </div>
     </div>
 
+    <!-- Quiz Modal -->
     <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content bg-dark text-white">
@@ -117,20 +105,24 @@
                 </div>
                 <div class="modal-body">
                     <form id="quizForm">
-                        <p>1. How many quadrants are there in a coordinate plane?</p>
-                        <input type="radio" name="q1" value="3"> 3<br>
-                        <input type="radio" name="q1" value="4"> 4<br>
-                        <input type="radio" name="q1" value="5"> 5<br>
+                        <p>1. Coordinate A is at (5, 3). If it moves 3 left and 5 down, what will the new coordinate be?</p>
+                        <input type="radio" name="q1" value="(2, -2)"> (2, -2)<br>
+                        <input type="radio" name="q1" value="(3, 5)"> (3, 5)<br>
+                        <input type="radio" name="q1" value="(8, 8)"> (8, 8)<br>
 
-                        <p>2. Which transformation flips a shape across a line?</p>
-                        <input type="radio" name="q2" value="Reflection"> Reflection<br>
-                        <input type="radio" name="q2" value="Rotation"> Rotation<br>
-                        <input type="radio" name="q2" value="Dilation"> Dilation<br>
+                        <p>2. What coordinate changes when you reflect over the y-axis?</p>
+                        <input type="radio" name="q2" value="x"> X<br>
+                        <input type="radio" name="q2" value="y"> Y<br>
 
-                        <p>3. What is the rule for a 90° clockwise rotation?</p>
-                        <input type="radio" name="q3" value="(y, -x)"> (y, -x)<br>
-                        <input type="radio" name="q3" value="(-y, x)"> (-y, x)<br>
-                        <input type="radio" name="q3" value="(-x, -y)"> (-x, -y)<br>
+                        <p>3. If a point starts in Quadrant I and moves 90° clockwise, which quadrant will it be in?</p>
+                        <input type="radio" name="q3" value="I"> Quadrant I<br>
+                        <input type="radio" name="q3" value="IV"> Quadrant IV<br>
+                        <input type="radio" name="q3" value="III"> Quadrant III<br>
+
+                        <p>4. What is the origin?</p>
+                        <input type="radio" name="q4" value="0,0"> (0, 0)<br>
+                        <input type="radio" name="q4" value="1,0"> (1, 0)<br>
+                        <input type="radio" name="q4" value="-1,0"> (-1, 0)<br>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -140,21 +132,54 @@
         </div>
     </div>
 
+    <!-- Final Score Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div id="resultContent" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Results</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <h3 id="resultMessage"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function submitQuiz() {
             const answers = {
-                q1: "4",
-                q2: "Reflection",
-                q3: "(y, -x)"
+                q1: "(2, -2)",
+                q2: "x",
+                q3: "IV",
+                q4: "0,0"
             };
             let correct = 0;
+            const total = Object.keys(answers).length;
             const form = document.getElementById("quizForm");
             for (const [key, value] of Object.entries(answers)) {
                 const selected = form.querySelector(`input[name="${key}"]:checked`);
-                if (selected && selected.value === value) correct++;
+                if (selected && selected.value === value) {
+                    correct++;
+                }
             }
-            const total = Object.keys(answers).length;
-            alert(`You got ${correct} out of ${total} correct!`);
+            const percentage = (correct / total) * 100;
+            const resultMessage = document.getElementById("resultMessage");
+            const resultContent = document.getElementById("resultContent");
+
+            if (percentage >= 80) {
+                resultContent.className = "modal-content bg-success text-white";
+                resultMessage.textContent = `You got ${percentage}%: You are such an alpha and the prettiest pink princess!`;
+            } else if (percentage >= 60) {
+                resultContent.className = "modal-content bg-warning text-dark";
+                resultMessage.textContent = `You got ${percentage}%: You are getting there beta!`;
+            } else {
+                resultContent.className = "modal-content bg-danger text-white";
+                resultMessage.textContent = `You got ${percentage}%: Reach your way up to alpha!`;
+            }
+            const resultModal = new bootstrap.Modal(document.getElementById("resultModal"));
+            resultModal.show();
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
