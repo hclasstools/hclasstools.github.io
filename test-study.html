@@ -11,6 +11,7 @@
             position: sticky;
             top: 10px;
         }
+        .hidden { display: none; }
     </style>
 </head>
 <body>
@@ -35,6 +36,9 @@
     <div class="container content my-4">
         <h1 class="text-center display-4 fw-bold mb-4">Latest Test Study</h1>
         <h2 class="text-center fw-bold mb-4">Latest Test: Math Test on Coordinates, Thursday December 5th</h2>
+        <div class="mb-4">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search in the study..." oninput="searchContent()">
+        </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="sticky-toc">
@@ -289,6 +293,19 @@
             q19: "Reflection over the x-axis changes the y-coordinate's sign.",
             q20: "You cannot dilate if the coordinate X or Y is 0."
         };
+        function searchContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const sections = document.querySelectorAll('.container .row .col-md-9 div');
+            
+            sections.forEach(section => {
+                const sectionText = section.textContent.toLowerCase();
+                if (sectionText.includes(query)) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        }
 
         function submitQuiz() {
             const form = document.getElementById("quizForm");
